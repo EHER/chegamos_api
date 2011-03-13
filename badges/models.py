@@ -30,6 +30,7 @@ class History(models.Model):
 	date = models.DateTimeField("Data/Hora")
 	user = models.ForeignKey(User)
 	badge = models.ForeignKey(Badge)
+	status = models.CharField(max_length=400)
 
 	def __unicode__(self):
-		return self.query
+		return self.status
